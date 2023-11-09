@@ -1,4 +1,5 @@
 <?php
+$BgColor = "";
 
 // Header Compenent 
 ob_start();
@@ -6,7 +7,7 @@ ob_start();
 ?>
 <div class="card-header">
     <div class="container-fluid ">
-        <h1 class="py-4 ">Gestion de projet</h1>
+        <h1 class="py-4 ">Gestion de Projet</h1>
         <div class="row d-flex align-items-center ">
             <div class="col-sm-6">
                 <a href="AjouteProjet.php" class="btn btn-success">Ajouté Projets</a>
@@ -57,11 +58,12 @@ ob_start();
                 Lorem ipsum dolor sit amet consectetur,
             </td>
             <td class="text-center">
-                <a href="./tache.php"><i class="fa-solid fa-eye"></i></a>
+                <a href="./tache.php" class="bg-light py-1 px-2 rounded"><i class="fa-regular fa-eye"></i></a>
             </td>
             <td class="text-center">
                 <a href="" class="bg-danger py-1 px-2 rounded"><i class="fa-solid fa-trash-can"></i></a>
-                <a href="" class="bg-primary py-1 px-2 rounded"><i class="fa-solid fa-pencil"></i></a>
+                <a href="./modifyProject.php" class="bg-primary py-1 px-2 rounded"><i
+                        class="fa-solid fa-pencil"></i></a>
             </td>
         </tr>
         <tr>
@@ -72,11 +74,12 @@ ob_start();
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
             </td>
             <td class="text-center">
-                <a href="./tache.php"><i class="fa-solid fa-eye"></i></a>
+                <a href="./tache.php" class="bg-light py-1 px-2 rounded"><i class="fa-regular fa-eye"></i></a>
             </td>
             <td class="text-center">
                 <a href="" class="bg-danger py-1 px-2 rounded"><i class="fa-solid fa-trash-can"></i></a>
-                <a href="" class="bg-primary py-1 px-2 rounded"><i class="fa-solid fa-pencil"></i></a>
+                <a href="./modifyProject.php" class="bg-primary py-1 px-2 rounded"><i
+                        class="fa-solid fa-pencil"></i></a>
             </td>
         </tr>
         <tr>
@@ -87,11 +90,12 @@ ob_start();
                 Dolor optio culpa eos totam consectetur animi,
             </td>
             <td class="text-center">
-                <a href="./tache.php"><i class="fa-solid fa-eye"></i></a>
+                <a href="./tache.php" class="bg-light py-1 px-2 rounded"><i class="fa-regular fa-eye"></i></a>
             </td>
             <td class="text-center">
                 <a href="" class="bg-danger py-1 px-2 rounded"><i class="fa-solid fa-trash-can"></i></a>
-                <a href="" class="bg-primary py-1 px-2 rounded"><i class="fa-solid fa-pencil"></i></a>
+                <a href="./modifyProject.php" class="bg-primary py-1 px-2 rounded"><i
+                        class="fa-solid fa-pencil"></i></a>
             </td>
         </tr>
         <tr>
@@ -104,11 +108,12 @@ ob_start();
                 commodi.
             </td>
             <td class="text-center">
-                <a href="./tache.php"><i class="fa-solid fa-eye"></i></a>
+                <a href="./tache.php" class="bg-light py-1 px-2 rounded"><i class="fa-regular fa-eye"></i></a>
             </td>
             <td class="text-center">
                 <a href="" class="bg-danger py-1 px-2 rounded"><i class="fa-solid fa-trash-can"></i></a>
-                <a href="" class="bg-primary py-1 px-2 rounded"><i class="fa-solid fa-pencil"></i></a>
+                <a href="./modifyProject.php" class="bg-primary py-1 px-2 rounded"><i
+                        class="fa-solid fa-pencil"></i></a>
             </td>
         </tr>
         <tr>
@@ -123,11 +128,12 @@ ob_start();
                 Inventore nihil consequuntur quisquam!
             </td>
             <td class="text-center">
-                <a href="./tache.php"><i class="fa-solid fa-eye"></i></a>
+                <a href="./tache.php" class="bg-light py-1 px-2 rounded"><i class="fa-regular fa-eye"></i></a>
             </td>
             <td class="text-center">
                 <a href="" class="bg-danger py-1 px-2 rounded"><i class="fa-solid fa-trash-can"></i></a>
-                <a href="" class="bg-primary py-1 px-2 rounded"><i class="fa-solid fa-pencil"></i></a>
+                <a href="./modifyProject.php" class="bg-primary py-1 px-2 rounded"><i
+                        class="fa-solid fa-pencil"></i></a>
             </td>
         </tr>
 
@@ -148,6 +154,10 @@ ob_start();
     <li class="page-item"><a class="page-link" href="#">3</a></li>
     <li class="page-item"><a class="page-link" href="#">»</a></li>
 </ul>
+<div>
+    <button class="btn btn-light"><i class="fa-solid fa-upload"></i> Exporter</button>
+    <button class="btn btn-light"><i class="fa-solid fa-download"></i> Importer</button>
+</div>
 <?php
 $Footer = ob_get_clean();
 

@@ -52,29 +52,31 @@
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
-            <div class="content-header">
-                <section class="text-dark p-3">
-                    <div class="card">
-                        <?= $Header ?>
+            <div class="content-header p-3">
+                <div class="card <?= $BgColor ?> ">
+                    <!-- card-secondary -->
+                    <!-- start Header -->
+                    <?= $Header ?>
+                    <!-- end Header -->
 
-                        <div class="card-body">
-                            <?= $Body ?>
-                        </div>
-
-                        <div class="card-footer clearfix">
-                            <?= $Footer ?>
-                        </div>
+                    <!-- start Body -->
+                    <div class="card-body">
+                        <?= $Body ?>
                     </div>
+                    <!-- end Body -->
 
+                    <!-- start footer -->
+                    <div class="card-footer">
+                        <?= $Footer ?>
 
+                    </div>
+                    <!-- start footer -->
 
-                </section>
+                </div>
             </div>
-
-            <!-- Main content -->
-
-            <!-- /.content -->
         </div>
+
+
 
         <!-- footer -->
         <?php include('./Sections/footer.php') ?>
@@ -92,14 +94,14 @@
     <!-- javascript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
-        </script>
+    </script>
     <!-- jQuery -->
     <script src="plugins/jquery/jquery.min.js"></script>
     <!-- jQuery UI 1.11.4 -->
     <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
     <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
     <script>
-        $.widget.bridge('uibutton', $.ui.button)
+    $.widget.bridge('uibutton', $.ui.button)
     </script>
     <!-- Bootstrap 4 -->
     <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>

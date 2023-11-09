@@ -1,4 +1,5 @@
 <?php
+$BgColor = "card-success";
 
 // Header Compenent 
 ob_start();
@@ -9,6 +10,7 @@ ob_start();
         <h1 class="py-4 ">Ajoute Tâche</h1>
     </div>
 </div>
+
 
 <?php
 $Header = ob_get_clean();

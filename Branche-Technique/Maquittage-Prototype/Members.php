@@ -10,7 +10,7 @@ ob_start();
 
 <div class="card-header">
     <div class="container-fluid ">
-        <h1 class="py-4 ">Ajoute projet</h1>
+        <h1 class="py-4 ">Ajoute Member</h1>
     </div>
 </div>
 

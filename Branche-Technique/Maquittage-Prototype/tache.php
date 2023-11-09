@@ -4,20 +4,24 @@
 ob_start();
 
 ?>
+
+
 <div class="card-header">
     <div class="container-fluid ">
         <h1 class="py-4 ">Gestion de Tâches</h1>
         <div class="row d-flex align-items-center ">
             <div class="col-sm-6">
-                <a href="AjouteTache.php" class="btn btn-success">Ajouté Tâche</a>
+                <a href="AjouteTache.php" class="btn btn-success">Ajouté Tâches</a>
             </div>
             <div class="col-sm-6">
                 <div class="input-group">
                     <input type="text" class="form-control" aria-label="Text input with dropdown button">
                     <select class="form-select" aria-label="Default select example">
-                        <option value="ThemeRapport">Theme Rapport</option>
-                        <option value="ThèmeDePrésentation">Thème de présentation</option>
-                        <option value="ChapitreDiagrammeDeContexte	">Chapitre - Diagramme de contexte </option>
+                        <option value="Projet1">Planéfication CNMH</option>
+                        <option value="Projet2">front end</option>
+                        <option value="Projet2">back end</option>
+                        <option value="Projet3">maquettage</option>
+                        <option value="Projet4">database</option>
                     </select>
                     <button type="button" class="btn btn-primary">Recherche</button>
                 </div>
@@ -99,6 +103,7 @@ ob_start();
     <li class="page-item"><a class="page-link" href="#">3</a></li>
     <li class="page-item"><a class="page-link" href="#">»</a></li>
 </ul>
+
 <?php
 $Footer = ob_get_clean();
 

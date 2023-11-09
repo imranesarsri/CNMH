@@ -20,8 +20,12 @@
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <li class="nav-item">
                     <a href="./index.php" class="nav-link active">
-                        <i class="fa-solid fa-building-shield"></i>
+                        <i class="fa-solid fa-rectangle-list"></i>
                         <p class="ms-2">Projet</p>
+                    </a>
+                    <a href="./Members.php" class="nav-link ">
+                        <i class="fa-solid fa-users"></i>
+                        <p class="ms-2">Members</p>
                     </a>
                 </li>
             </ul>
