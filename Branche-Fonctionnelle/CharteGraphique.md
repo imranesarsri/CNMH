@@ -6,7 +6,7 @@
 
 ## Color palette
 
-The background color is `#ffffff` for light mode and `#C8E8F4` for dark mode.
+![Color palette](./images/Screenshot%202023-11-09%20104241.png)
 
 > [link palette](https://docs.google.com/presentation/d/1AcpOO3oRO92nFuhlUgwleGB6ZnNo_37ZgCmzwH2WxuQ/edit?usp=sharing)
 
