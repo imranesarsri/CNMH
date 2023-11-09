@@ -2,7 +2,7 @@
 
 ## Logo CNMH
 
-![logo CNMH](https://www.google.com/url?sa=i&url=https%3A%2F%2Ftanmia.ma%2F26-09-2022%2F49214%2F&psig=AOvVaw2o0rOpvYhczwrEGwbZqT-_&ust=1699608684225000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCKCgzfHNtoIDFQAAAAAdAAAAABAE)
+![logo CNMH](https://tanmia.ma/wp-content/uploads/2022/09/cnmh.jpg)
 
 ## Color palette
 
