@@ -65,10 +65,13 @@
                         <i class="fas fa-th-large"></i>
                     </a>
                 </li>
-                <div class="d-flex gap-2 align-items-center ">
-                    <img style="width: 30px;height: 30px; border-radius: 97px;border: 2px black solid;"
-                        src="../dist/img/avatar.png" alt="">
-                    <p>imrane sarsri</p>
+                <div class="user-panel d-flex align-items-center">
+                    <div class="image">
+                        <img src="../dist/img/avatar.png" class="img-circle elevation-2" alt="User Image">
+                    </div>
+                    <div class="info ">
+                        <a href="index.html" class="d-block text-dark text-decoration-none">imrane sarsri</a>
+                    </div>
                 </div>
             </ul>
         </nav>
@@ -116,11 +119,8 @@
                     <div class="card-header bg-white">
                         <div class="row d-flex align-items-center ">
                             <div class="col-sm-6">
-                                <a href="AjouteProjet.html" class="btn btn-success">Ajouté Projets</a>
-                            </div>
-                            <div class="col-sm-6">
                                 <div class="input-group">
-                                    <input type="text" class="form-control"
+                                    <input type="text" placeholder="Search" class="form-control"
                                         aria-label="Text input with dropdown button">
                                     <select class="form-select" aria-label="Default select example">
                                         <option value="Projet1">Planéfication CNMH</option>
@@ -129,8 +129,12 @@
                                         <option value="Projet3">maquettage</option>
                                         <option value="Projet4">database</option>
                                     </select>
-                                    <button type="button" class="btn btn-primary">Recherche</button>
+                                    <button type="button" class="btn btn-primary"><i
+                                            class="fa-solid fa-magnifying-glass"></i></button>
                                 </div>
+                            </div>
+                            <div class="col-sm-6 text-end">
+                                <a href="AjouteProjet.html" class="btn btn-success">Ajouté Projets</a>
                             </div>
                         </div>
                     </div> <!-- end Header -->
