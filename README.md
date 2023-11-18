@@ -35,12 +35,13 @@ La méthode agile, également connue sous le nom de développement agile ou gest
 L'objectif principal des méthodes agiles est de permettre aux équipes de répondre de manière plus efficace aux besoins changeants des clients, de réduire les risques liés au développement de produits,  d'améliorer la qualité du produit final et d'optimiser la satisfaction des parties prenantes.
 
 <!-- img Méthode agile -->
-![image Méthode agile](./images/MéthodeAgile.jpg)
+![image Méthode agile](https://etcdigital.fr/wp-content/uploads/2022/01/MicrosoftTeams-image-10.jpg)
 ### Scrum 
 
 Scrum est une méthodologie de gestion de projet agile qui se base sur des cycles de travail itératifs appelés « sprints ». Il implique un Product Owner, un Scrum Master, une équipe de développement et utilise des événements tels que les réunions quotidiennes, les revues de sprint et les rétrospectives de sprint pour favoriser la collaboration, la transparence et la livraison régulière de fonctionnalités de haute qualité. Le Scrum permet aux équipes de répondre rapidement aux changements et de livrer de la valeur plus rapidement. 
 
 <!-- img Scrum  -->
+![image Scrum](https://www.pm-partners.com.au/wp-content/uploads/2021/06/blog-scrum-process-opt.jpg)
 
 ## Processus de développement
 
@@ -66,6 +67,7 @@ Le processus s'articule ensuite autour de 3 phases essentielles :
 **La phase de réalisation** consiste à réunir les deux branches, permettant de mener une conception applicative et enfin la livraison d'une solution adaptée aux besoins. Arrive par la suite l’étape de codage et enfin l’étape de recette, qui consiste à valider les fonctions du système développé.
 
 <!-- img 2tup -->
+![image 2tup](https://www.researchgate.net/publication/303497462/figure/fig6/AS:556507492487174@1509693133373/La-methode-2TUP-6.png)
 
 ### Design thinking
 
@@ -84,4 +86,4 @@ Créer des prototypes tangibles ou des représentations visuelles des solutions 
 #### Test
 Tester les prototypes auprès d’utilisateurs réels. Les premières maquettes comportent nécessairement des erreurs, qu’il faut identifier au plus vite et dont il faut ensuite tirer des enseignements.
 
-<!-- img Design thinking -->
+![image Design Thinking ](https://media.nngroup.com/media/editor/2016/07/25/designthinking_illustration_final2-02.png)
