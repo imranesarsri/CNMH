@@ -36,12 +36,16 @@ L'objectif principal des méthodes agiles est de permettre aux équipes de répo
 
 <!-- img Méthode agile -->
 ![image Méthode agile](https://etcdigital.fr/wp-content/uploads/2022/01/MicrosoftTeams-image-10.jpg)
+___
+
 ### Scrum 
 
 Scrum est une méthodologie de gestion de projet agile qui se base sur des cycles de travail itératifs appelés « sprints ». Il implique un Product Owner, un Scrum Master, une équipe de développement et utilise des événements tels que les réunions quotidiennes, les revues de sprint et les rétrospectives de sprint pour favoriser la collaboration, la transparence et la livraison régulière de fonctionnalités de haute qualité. Le Scrum permet aux équipes de répondre rapidement aux changements et de livrer de la valeur plus rapidement. 
 
 <!-- img Scrum  -->
 ![image Scrum](https://www.pm-partners.com.au/wp-content/uploads/2021/06/blog-scrum-process-opt.jpg)
+
+___
 
 ## Processus de développement
 
@@ -68,6 +72,8 @@ Le processus s'articule ensuite autour de 3 phases essentielles :
 
 <!-- img 2tup -->
 ![image 2tup](https://www.researchgate.net/publication/303497462/figure/fig6/AS:556507492487174@1509693133373/La-methode-2TUP-6.png)
+
+___
 
 ### Design thinking
 
