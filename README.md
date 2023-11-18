@@ -35,7 +35,7 @@ La méthode agile, également connue sous le nom de développement agile ou gest
 L'objectif principal des méthodes agiles est de permettre aux équipes de répondre de manière plus efficace aux besoins changeants des clients, de réduire les risques liés au développement de produits,  d'améliorer la qualité du produit final et d'optimiser la satisfaction des parties prenantes.
 
 <!-- img Méthode agile -->
-![image Méthode agile](./images/MéthodeAgile.jpg)
+<!-- ![image Méthode agile](./images/MéthodeAgile.jpg) -->
 ### Scrum 
 
 Scrum est une méthodologie de gestion de projet agile qui se base sur des cycles de travail itératifs appelés « sprints ». Il implique un Product Owner, un Scrum Master, une équipe de développement et utilise des événements tels que les réunions quotidiennes, les revues de sprint et les rétrospectives de sprint pour favoriser la collaboration, la transparence et la livraison régulière de fonctionnalités de haute qualité. Le Scrum permet aux équipes de répondre rapidement aux changements et de livrer de la valeur plus rapidement. 
