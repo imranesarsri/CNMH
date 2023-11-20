@@ -34,7 +34,6 @@ Ce chapitre explique les principes de l'agilité et ses avantages, en se concent
 La méthode agile, également connue sous le nom de développement agile ou gestion de projet agile, est une approche itérative et collaborative de la gestion de projets et de développement logiciel. Elle met l'accent sur l'adaptabilité, la flexibilité et la livraison continue de produits ou de fonctionnalités.
 L'objectif principal des méthodes agiles est de permettre aux équipes de répondre de manière plus efficace aux besoins changeants des clients, de réduire les risques liés au développement de produits,  d'améliorer la qualité du produit final et d'optimiser la satisfaction des parties prenantes.
 
-<!-- img Méthode agile -->
 ![image Méthode agile](https://etcdigital.fr/wp-content/uploads/2022/01/MicrosoftTeams-image-10.jpg)
 ___
 
@@ -92,4 +91,4 @@ Créer des prototypes tangibles ou des représentations visuelles des solutions 
 #### Test
 Tester les prototypes auprès d’utilisateurs réels. Les premières maquettes comportent nécessairement des erreurs, qu’il faut identifier au plus vite et dont il faut ensuite tirer des enseignements.
 
-![image Design Thinking ](https://media.nngroup.com/media/editor/2016/07/25/designthinking_illustration_final2-02.png)
+![image Design Thinking](https://media.nngroup.com/media/editor/2016/07/25/designthinking_illustration_final2-02.png)
