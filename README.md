@@ -1,6 +1,6 @@
 # Center National Mohammed VI Des Handicapés 
 
-## Introduction 
+## Introduction :
 
 Né d’une Volonté Royale, le Centre National Mohammed VI des Handicapés (CNMH Tanger) a été voulu comme un outil de changement d’échelle dans l’action menée par la Fondation en faveur du handicap. Il apporte une réponse concrète aux questions de prises en charge du public handicapé et aux attentes en matière d’accompagnement des familles et intervenants du secteur. 
 Le CNMH Tanger vise l’amélioration des conditions d’éducation, de réadaptation, d’accès à la santé, aux activités sportives adaptées et à la qualification professionnelle des enfants et adultes en situation de handicap.
