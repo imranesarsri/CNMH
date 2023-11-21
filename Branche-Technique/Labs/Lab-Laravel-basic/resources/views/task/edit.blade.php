@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('../layouts.layout')
 @section('content')
     <div class="content-header">
     </div>
@@ -9,13 +9,15 @@
 
                     <div class="card card-primary">
                         <div class="card-header">
-                            <h3 class="card-title">Ajouet Tâche</h3>
+                            <h3 class="card-title">Edit Tâche </h3>
                         </div>
-                        <form>
+                        <form method="put" action="{{ route('task.store', ['Task' => $Task->id]) }}">
+                            @csrf
+                            {{-- @method('put') --}}
                             <div class="card-body">
                                 <div class="form-group">
-                                    <label for="Projet">Projet</label>
-                                    <select id="Projet" class="custom-select">
+                                    <label for="Projet">Projet <span class="text-danger">*</span></label>
+                                    <select id="Projet" name="projectName" class="custom-select">
                                         <option>option 1</option>
                                         <option>option 2</option>
                                         <option>option 3</option>
@@ -24,20 +26,19 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Nom</label>
-                                    <input name="nom" type="text" class="form-control" id="exampleInputEmail1"
-                                        placeholder="Enter email">
+                                    <input type="text" class="form-control" value={{ $Task->taskName }} id="taskName"
+                                        placeholder="Enter le name de Tâche">
                                 </div>
 
+
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Description</label>
-                                    <input name="description" type="text" class="form-control" id="exampleInputPassword1"
-                                        placeholder="Description">
+                                    <label>Description</label>
+                                    <textarea class="form-control" name="description" rows="3" placeholder="Entre un Description ">{{ $Task->description }}</textarea>
                                 </div>
                             </div>
 
                             <div class="card-footer">
-                                <a href="./index.html" class="btn btn-default">Cancel</a>
+                                <a href="{{ route('task.index') }}" class="btn btn-default">annuler</a>
                                 <button type="submit" class="btn btn-primary">Ajouter</button>
                             </div>
                         </form>

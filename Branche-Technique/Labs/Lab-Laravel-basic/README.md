@@ -41,7 +41,15 @@ php artisan migrate
 ```
 php artisan make:model Project 
 ```
+<!--  -->
+<!--  -->
+migration
+php artisan migrate:rollback
 
+
+morphs()
+<!--  -->
+<!--  -->
 
 
 ## database et tables

@@ -18,10 +18,12 @@ Route::get('/', function () {
 });
 
 
-Route::get('/project', function () {
-    return view('index');
-});
 
-Route::get('/create', function () {
-    return view('create');
-});
+
+// Route::get('index', function () {
+//     return view('task.index');
+// });
+
+
+
+Route::resource('task', 'taskController');

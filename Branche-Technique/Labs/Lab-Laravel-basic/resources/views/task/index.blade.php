@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('../layouts.layout')
 @section('content')
     <div class="content-header">
         <div class="container-fluid">
@@ -8,7 +8,7 @@
                 </div>
                 <div class="col-sm-6">
                     <div class="float-sm-right">
-                        <a href="./ajouter.html" class="btn btn-sm btn-primary">Ajouter tâche</a>
+                        <a href="{{ route('task.create') }}" class="btn btn-sm btn-primary">Ajouter tâche</a>
                     </div>
                 </div>
             </div>
@@ -38,23 +38,27 @@
                                 <thead>
                                     <tr>
                                         <th>Tâche</th>
+                                        <th>Projet</th>
                                         <th>Description</th>
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>Projet 1</td>
-                                        <td>
-                                            Description de projet 1.
-                                        </td>
-                                        <td>
-                                            <a href="./edit.html" class="btn btn-sm btn-default"><i
-                                                    class="fa-solid fa-pen-to-square"></i></a>
-                                            <button type="button" class="btn btn-sm btn-danger"><i
-                                                    class="fa-solid fa-trash"></i></button>
-                                        </td>
-                                    </tr>
+                                    @foreach ($Tasks as $Task)
+                                        <tr>
+                                            <td>{{ $Task->taskName }}</td>
+                                            <td>{{ $Task->projectName }}</td>
+                                            <td>
+                                                {{ $Task->description }}.
+                                            </td>
+                                            <td>
+                                                <a href="task/{{ $Task->id }}/edit" class="btn btn-sm btn-default"><i
+                                                        class="fa-solid fa-pen-to-square"></i></a>
+                                                <button type="button" class="btn btn-sm btn-danger"><i
+                                                        class="fa-solid fa-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>

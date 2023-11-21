@@ -14,7 +14,7 @@
 | ![colore #537E90](./images/CharteGraphique/palit1-04.png) | #537E90           |
 | ![colore #326279](./images/CharteGraphique/palit1-05.png) | #326279           |
 
-## Color Palette V2
+## Color corrected
 
 | colore                                    | code de référence |
 | ----------------------------------------- | ----------------- |
