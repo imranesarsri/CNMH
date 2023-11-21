@@ -27,6 +27,15 @@
 ## Font Family
 
 - Poppins
+- Montserrat
+
+Dans la création d'un message lié à la santé, le choix des polices de caractères joue un rôle crucial pour transmettre une impression de clarté et de professionnalisme. La combinaison de l'esthétique moderne de "`Poppins`" avec l'élégance géométrique de "`Montserrat`" crée un langage visuel harmonieux qui résonne bien dans le domaine de la santé. Les lignes épurées et la lisibilité de `Montserrat` contribuent à une sensation de transparence et de confiance, des éléments essentiels lors de la communication d'informations liées au bien-être. Cet assortiment de polices améliore non seulement l'attrait visuel des documents liés à la santé, mais renforce également l'engagement envers une communication claire et accessible dans la promotion d'un mode de vie plus sain.
+
+
+
+
+
+
 
 ## References
 
