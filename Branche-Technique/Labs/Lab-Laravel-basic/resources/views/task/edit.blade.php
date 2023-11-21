@@ -11,8 +11,9 @@
                         <div class="card-header">
                             <h3 class="card-title">Edit Tâche </h3>
                         </div>
-                        <form method="put" action="{{ route('task.store', ['Task' => $Task->id]) }}">
+                        <form action="{{ route('task.update', ['task' => $Task->id]) }}" method="post">
                             @csrf
+                            @method('put')
                             {{-- @method('put') --}}
                             <div class="card-body">
                                 <div class="form-group">
@@ -26,10 +27,9 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" value={{ $Task->taskName }} id="taskName"
-                                        placeholder="Enter le name de Tâche">
+                                    <input type="text" name="taskName" class="form-control" value="{{ $Task->taskName }}"
+                                        id="taskName" placeholder="Enter le name de Tâche">
                                 </div>
-
 
                                 <div class="form-group">
                                     <label>Description</label>
@@ -39,7 +39,7 @@
 
                             <div class="card-footer">
                                 <a href="{{ route('task.index') }}" class="btn btn-default">annuler</a>
-                                <button type="submit" class="btn btn-primary">Ajouter</button>
+                                <button type="submit" class="btn btn-primary">update</button>
                             </div>
                         </form>
                     </div>

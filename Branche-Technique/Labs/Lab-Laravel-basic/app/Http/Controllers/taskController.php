@@ -67,7 +67,9 @@ class taskController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        // dd($request->only($this->columns));
+        Task::where('id', $id)->update($request->only($this->columns));
+        return redirect('task');
     }
 
     /**

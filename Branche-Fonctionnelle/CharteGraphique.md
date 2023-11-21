@@ -1,10 +1,21 @@
 # Charte Graphique
 
-## Logo CNMH
+## Les Logos 
+
+### Logos CNMH
 
 ![logo CNMH](./images/cnmh.jpg)
 
-## Color Palette
+### Logos SOLICODE
+
+![logo SOLICODE](./images/solicode.png)
+
+### Logos OFPPT
+
+![logo SOLICODE](./images/ofppt.png)
+
+
+## Color Palette reda
 
 | colore                                    | code de référence |
 | ----------------------------------------- | ----------------- |
