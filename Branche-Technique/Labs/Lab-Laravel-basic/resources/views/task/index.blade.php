@@ -70,14 +70,8 @@
                         </div>
 
                         <div class="d-flex justify-content-end align-items-center p-2">
-                            <div class="">
-                                <ul class="pagination  m-0 float-right">
-                                    <li class="page-item"><a class="page-link" href="#">«</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">»</a></li>
-                                </ul>
+                            <div class="pagination  m-0 float-right">
+                                {{ $Tasks->links() }}
                             </div>
                         </div>
                     </div>
