@@ -47,10 +47,11 @@ class taskController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
-    {
-        //
-    }
+    // public function show(string $id)
+    // {
+    //     $Task = Task::find($id);
+    //     return view('task.show', compact('Task'));
+    // }
 
     /**
      * Show the form for editing the specified resource.
@@ -59,7 +60,7 @@ class taskController extends Controller
     {
         // dd(Task::find($id));
         $Task = Task::find($id);
-        return view('task/edit', compact('Task'));
+        return view('task.edit', compact('Task'));
     }
 
     /**
@@ -77,6 +78,8 @@ class taskController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $Task = Task::find($id);
+        $Task->delete();
+        return redirect('task');
     }
 }

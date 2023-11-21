@@ -51,11 +51,17 @@
                                             <td>
                                                 {{ $Task->description }}.
                                             </td>
-                                            <td>
-                                                <a href="task/{{ $Task->id }}/edit" class="btn btn-sm btn-default"><i
-                                                        class="fa-solid fa-pen-to-square"></i></a>
-                                                <button type="button" class="btn btn-sm btn-danger"><i
-                                                        class="fa-solid fa-trash"></i></button>
+                                            <td class="d-flex">
+                                                <a href="task/{{ $Task->id }}/edit" class="btn btn-sm btn-default mx-2">
+                                                    <i class="fa-solid fa-pen-to-square"></i>
+                                                </a>
+                                                <form action="{{ route('task.destroy', ['task' => $Task->id]) }}"
+                                                    method="post">
+                                                    @csrf
+                                                    @method('delete')
+                                                    <button type="submit" class="btn btn-sm btn-danger"><i
+                                                            class="fa-solid fa-trash"></i></button>
+                                                </form>
                                             </td>
                                         </tr>
                                     @endforeach

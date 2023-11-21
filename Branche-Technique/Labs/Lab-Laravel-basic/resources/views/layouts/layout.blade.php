@@ -43,7 +43,6 @@
         @include('layouts.sidebar')
         <div class="content-wrapper" style="min-height: 1302.4px;">
             @yield('content')
-
         </div>
 
         @include('layouts.footer')
