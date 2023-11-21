@@ -15,17 +15,7 @@
 ![logo SOLICODE](./images/ofppt.png)
 
 
-## Color Palette reda
-
-| colore                                    | code de référence |
-| ----------------------------------------- | ----------------- |
-| ![colore #C8E8F4](./images/CharteGraphique/palit1-01.png) | #C8E8F4           |
-| ![colore #DFF2F8](./images/CharteGraphique/palit1-02.png) | #DFF2F8           |
-| ![colore #EBEB94](./images/CharteGraphique/palit1-03.png) | #EBEB94           |
-| ![colore #537E90](./images/CharteGraphique/palit1-04.png) | #537E90           |
-| ![colore #326279](./images/CharteGraphique/palit1-05.png) | #326279           |
-
-## Color corrected
+## Color Palette
 
 | colore                                    | code de référence |
 | ----------------------------------------- | ----------------- |
