@@ -80,6 +80,8 @@ class taskController extends Controller
     {
         $Task = Task::find($id);
         $Task->delete();
+        // Task::where('id', $id)->delete();
+
         return redirect('task');
     }
 }

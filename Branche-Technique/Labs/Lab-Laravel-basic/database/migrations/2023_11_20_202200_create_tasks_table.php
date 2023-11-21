@@ -14,7 +14,7 @@ return new class extends Migration {
             $table->id();
             $table->string('taskName', 50);
             $table->string('projectName', 50);
-            $table->string('description');
+            $table->string('description')->nullable();
             $table->timestamps();
         });
     }
