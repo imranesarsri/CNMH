@@ -1,8 +1,6 @@
 # Lab-Markdown
 ## Travail a faire
 
-![image logo](https://icones.pro/wp-content/uploads/2021/03/avatar-de-personne-icone-homme.png)
-
 Créer un CV avec Markdown.
 Éléments qui devraient être mentionnés dans ce projet :
 - Compétences Techniques
