@@ -17,8 +17,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// Route::fallback(fn() => ('/'));
 
-
+Route::fallback(function () {
+    return view('Error404');
+});
 
 
 // Route::get('index', function () {

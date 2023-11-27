@@ -17,24 +17,28 @@
                             <div class="card-body">
                                 <div class="form-group">
                                     <label for="Projet">Projet <span class="text-danger">*</span></label>
-                                    <select id="Projet" name="projectName" class="custom-select">
-                                        <option>option 1</option>
-                                        <option>option 2</option>
-                                        <option>option 3</option>
-                                        <option>option 4</option>
-                                        <option>option 5</option>
+                                    <select name="projectName" id="Projet" class="custom-select">
+                                        @foreach ($Projects as $Project)
+                                            <option value="{{ $Project->projectName }}">{{ $Project->projectName }}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <label for="nominputnom1">Nom <span class="text-danger">*</span></label>
-                                    <input name="taskName" type="text" class="form-control" id="nominputnom1"
-                                        placeholder="Enter le name de Tâche">
+                                    <input name="taskName" type="text"
+                                        class="form-control @error('taskName') border-danger @enderror" id="nominputnom1"
+                                        placeholder="Enter le name de Tâche" value="{{ old('taskName') }}">
+                                    @error('taskName')
+                                        <p class="text-danger"> {{ $message }} </p>
+                                    @enderror
                                 </div>
-
-
                                 <div class="form-group">
-                                    <label>Description</label>
-                                    <textarea class="form-control" name="description" rows="3" placeholder="Entre un Description "></textarea>
+                                    <label class="">Description</label>
+                                    <textarea class="form-control @error('description') border-danger @enderror" name="description" rows="3"
+                                        placeholder="Entre un Description">{{ old('description') }}</textarea>
+                                    @error('description')
+                                        <p class="text-danger"> {{ $message }} </p>
+                                    @enderror
                                 </div>
                             </div>
 

@@ -17,23 +17,34 @@
                             {{-- @method('put') --}}
                             <div class="card-body">
                                 <div class="form-group">
-                                    <label for="Projet">Projet <span class="text-danger">*</span></label>
+                                    <label for="Projet">Projet<span class="text-danger">*</span></label>
                                     <select id="Projet" name="projectName" class="custom-select">
-                                        <option>option 1</option>
-                                        <option>option 2</option>
-                                        <option>option 3</option>
-                                        <option>option 4</option>
-                                        <option>option 5</option>
+                                        <option name="{{ $Task->projectName }}">{{ $Task->projectName }}</option>
+                                        @foreach ($Projects as $Project)
+                                            @if ($Project->projectName != $Task->projectName)
+                                                <option name="{{ $Project->projectName }}">{{ $Project->projectName }}
+                                                </option>
+                                            @endif
+                                        @endforeach
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" name="taskName" class="form-control" value="{{ $Task->taskName }}"
-                                        id="taskName" placeholder="Enter le name de Tâche">
+                                    <label for="Projet">Nom <span class="text-danger">*</span></label>
+                                    <input type="text" name="taskName"
+                                        class="form-control @error('taskName') border-danger @enderror"
+                                        value="{{ $Task->taskName }}" id="taskName" placeholder="Enter le name de Tâche">
+                                    @error('taskName')
+                                        <p class="text-danger">{{ $message }}</p>
+                                    @enderror
                                 </div>
 
                                 <div class="form-group">
-                                    <label>Description</label>
-                                    <textarea class="form-control" name="description" rows="3" placeholder="Entre un Description ">{{ $Task->description }}</textarea>
+                                    <label class="">Description</label>
+                                    <textarea class="form-control @error('description') border-danger @enderror" name="description" rows="3"
+                                        placeholder="Entre un Description ">{{ $Task->description }}</textarea>
+                                    @error('description')
+                                        <p class="text-danger">{{ $message }}</p>
+                                    @enderror
                                 </div>
                             </div>
 

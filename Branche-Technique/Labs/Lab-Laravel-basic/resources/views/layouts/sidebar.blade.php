@@ -1,7 +1,7 @@
 <!-- aside -->
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="#" class="brand-link text-center">
+    <a href="{{ route('task.index') }}" class="brand-link text-center">
         <span class="brand-text font-weight-bold ">Lab Laravel Basic</span>
     </a>
 

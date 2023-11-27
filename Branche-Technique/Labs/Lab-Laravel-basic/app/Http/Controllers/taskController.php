@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Task;
+use App\Models\Project;
 
 class taskController extends Controller
 {
@@ -22,7 +23,8 @@ class taskController extends Controller
      */
     public function create()
     {
-        return view('task.create');
+        $Projects = Project::all();
+        return view('task.create', compact('Projects'));
     }
 
     /**
@@ -39,9 +41,22 @@ class taskController extends Controller
         //     'description' => $request->description,
         // ]);
         // Task::create($request->only('taskName', 'projectName', 'description'));
-        Task::create($request->only($this->columns));
+        // $request->validate([
+        // $Task = 'taskName' => 'required|string|max:50',
+        // 'projectName' => 'required',
+        // 'description' => 'required',
+        // ]);
+        // Task::create($Task);
 
+        $data = $request->validate([
+            'taskName' => 'required|string|max:50',
+            'projectName' => 'required',
+            'description' => 'required',
+        ]);
+        // dd($data);
+        Task::create($data);
         return redirect('task');
+
     }
 
     /**
@@ -60,7 +75,8 @@ class taskController extends Controller
     {
         // dd(Task::find($id));
         $Task = Task::find($id);
-        return view('task.edit', compact('Task'));
+        $Projects = Project::all();
+        return view('task.edit', compact('Task', 'Projects'));
     }
 
     /**
@@ -69,7 +85,13 @@ class taskController extends Controller
     public function update(Request $request, string $id)
     {
         // dd($request->only($this->columns));
-        Task::where('id', $id)->update($request->only($this->columns));
+        $data = $request->validate([
+            'taskName' => 'required|string|max:50',
+            'projectName' => 'required',
+            'description' => 'required',
+        ]);
+        // dd($data);
+        Task::where('id', $id)->update($data);
         return redirect('task');
     }
 
