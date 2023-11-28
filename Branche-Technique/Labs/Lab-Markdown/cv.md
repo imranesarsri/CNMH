@@ -5,9 +5,6 @@
 ![image logo](./logo.jpg)
 
 
-<!-- | Absolute URL | Relative URL |
-| ------------ | ------------ |
-|![image logo](https://icones.pro/wp-content/uploads/2021/03/avatar-de-personne-icone-homme.png)|![image logo](./logo.jpg)| -->
 
 ___
 

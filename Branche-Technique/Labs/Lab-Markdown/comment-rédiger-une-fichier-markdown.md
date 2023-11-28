@@ -254,11 +254,22 @@ To order your list, precede each line with a number.
 
 ##### Code :
 
+**Absolute URL**
 ```
-![logo github](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png)
+![image logo](https://icones.pro/wp-content/uploads/2021/03/avatar-de-personne-icone-homme.png)
+```
+**Relative URL**
+
+```
+![image logo](./logo.jpg)
 ```
 
 ##### Example :
+
+
+| Absolute URL | Relative URL |
+| ------------ | ------------ |
+|![image logo](https://icones.pro/wp-content/uploads/2021/03/avatar-de-personne-icone-homme.png)|![image logo](./logo.jpg)|
 
 ![logo github](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png)
 
