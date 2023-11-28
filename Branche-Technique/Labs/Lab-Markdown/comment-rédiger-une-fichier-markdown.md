@@ -2,7 +2,7 @@
 
 ---
 
-## Task: Formatting a document in Markdown
+## Tâche : Mise en forme d'un document en Markdown
 
 ## Description of the task :
 

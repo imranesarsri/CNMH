@@ -31,6 +31,3 @@ ___
 
 [Github Markdawn Référence](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 
--  J'ai élaboré une brève référence supplémentaire à partir de la source principale
-  
-[Mon Référence ](./comment-rédiger-une-fichier-markdown.md)
