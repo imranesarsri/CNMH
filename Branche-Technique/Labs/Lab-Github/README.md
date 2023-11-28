@@ -2,8 +2,9 @@
 
 In this lab, we need to complete the following tasks:
 
-## Tasks
+## Travail a faire
 
+<!-- 
 1. Working with Branches in GitHub: We will explore how to create, manage, and work with branches in GitHub. Branches allow us to work on different features or fixes concurrently without affecting the main codebase. We'll learn how to create branches, switch between them, and merge changes back to the main branch.
 
 1. Resolving Conflicts: Conflict resolution is a common challenge when collaborating on code. We will practice resolving conflicts that may occur when merging branches. This involves identifying conflicting changes and deciding which version of the code to keep.
@@ -107,4 +108,4 @@ Now, the changes from the bracnh-1 and branch-2 branches are merged into the mai
 
 ```
 
-```
+``` -->
