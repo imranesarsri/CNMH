@@ -29,10 +29,8 @@ ___
 
 - En ce qui concerne les références, j'ai eu recours à une source fondamentale, disponible à l'adresse:
 
-[github markdawn Référence](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+[Github Markdawn Référence](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 
-- pour consolider ma compréhension initiale. Cette référence constitue une ressource précieuse offrant des informations détaillées sur la syntaxe de base et le formatage en Markdown sur GitHub. En complément, j'ai élaboré une brève référence supplémentaire à partir de la source principale située à  
+-  j'ai élaboré une brève référence supplémentaire à partir de la source principale
   
-[github markdawn Référence](./comment-rédiger-une-fichier-markdown.md)
-
-- Cette démarche a été entreprise afin d'approfondir mes connaissances en explorant une autre perspective liée à l'utilisation de Markdown dans un contexte spécifique.
+[Mon Référence ](./comment-rédiger-une-fichier-markdown.md)
