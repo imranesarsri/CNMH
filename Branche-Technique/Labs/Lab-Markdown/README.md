@@ -1,7 +1,7 @@
 # Lab-Markdown
 ## Travail a faire
 
-  Je vais créer une cv organisée et claire en utilisant le markdown.
+vous devez créer une cv organisée et claire en utilisant le markdown.
 
 ## Critères de validation:
 
