@@ -2,74 +2,74 @@
 # Imrane Sarsri
 ## Développeur web full stack
 
+![image logo](./logo.jpg)
 
 
-
-| Absolute URL | Relative URL |
+<!-- | Absolute URL | Relative URL |
 | ------------ | ------------ |
-|![image logo](https://icones.pro/wp-content/uploads/2021/03/avatar-de-personne-icone-homme.png)|![image logo](./logo.jpg)|
+|![image logo](https://icones.pro/wp-content/uploads/2021/03/avatar-de-personne-icone-homme.png)|![image logo](./logo.jpg)| -->
 
 ___
 
 ## Compétences Techniques
-### FRONT-END :
 
-- html 5
-- css 3
-- javascript
-- GIT et github
-- bootstrap 
-- tailwind
-- ajax
-- jquery 
-- react
+- **FRONT-END**
+    - html 5
+    - css 3
+    - javascript
+    - GIT et github
+    - bootstrap 
+    - tailwind
+    - ajax
+    - jquery 
+    - react
+  
+- **BACK-END**
+    - PHP
+    - OOP
+    - SQL / MYSQL
 
-### BACK-END
-  
-- PHP
-- OOP
-- SQL / MYSQL
-  
-### Compétences transversales
-- Résolution de problèmes
-- Sens de communication
-- travail de groupe
-- Auto-éducation
+
+
+
 ___
 
 ## formations
 
-> 2022 - 2023 
-> **centre solidaire digital - solicode - tanger** 
-> mode bootcamp - développement web
+2022 - 2023 
+**centre solidaire digital - solicode - tanger** 
+mode bootcamp - développement web
 
-> 2022 - 2023 
-> **centre solidaire digital - simplonline** 
-> mode bootcamp - développement web
+2022 - 2023 
+**centre solidaire digital - simplonline** 
+mode bootcamp - développement web
 
-> 2021 - 2022 
-> **Lycée mhdi al mnjra, tanger** 
-> baccalauréat : science physique 
+2021 - 2022 
+**Lycée mhdi al mnjra, tanger** 
+baccalauréat : science physique 
 
 ___
 
 ## Contact
 
-- 0626156115
-- sarsri.imrane@gmail.com
-- hay bir jdid gznaya tanger
-- 2004 / 04 / 01
-- github.com/imranesarsri
-- Imrane Sarsri
 
+
+| Noms                  | Contacts                    |
+| --------------------- | --------------------------- |
+| numéro de téléphone   | 0626156115                  |
+| email                 | sarsri.imrane@gmail.com     |
+| adresse               | hay bir jdid gznaya tanger  |
+| Date de naissance     | 2004 / 04 / 01              |
+| github                | github.com/imranesarsri     |
+| linkedin              | Imrane Sarsri               |
 ___
 
 ## centresd'intérêt
 
-- Programmation
-- Lecture
-- Jeux vidéo
-- Sport
+- [x] Programmation
+- [x] Lecture
+- [x] Jeux vidéo
+- [x] Sport
 
 ___
 
