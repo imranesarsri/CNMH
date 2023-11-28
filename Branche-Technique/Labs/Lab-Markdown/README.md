@@ -1,7 +1,7 @@
 # Lab-Markdown
 ## Travail a faire
 
-vous devez créer une cv organisée et claire en utilisant le markdown.
+Vous devez créer une cv organisée et claire en utilisant le markdown.
 
 ## Critères de validation:
 
@@ -31,6 +31,6 @@ ___
 
 [Github Markdawn Référence](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 
--  j'ai élaboré une brève référence supplémentaire à partir de la source principale
+-  J'ai élaboré une brève référence supplémentaire à partir de la source principale
   
 [Mon Référence ](./comment-rédiger-une-fichier-markdown.md)
