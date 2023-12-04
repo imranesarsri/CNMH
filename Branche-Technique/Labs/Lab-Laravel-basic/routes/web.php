@@ -24,10 +24,5 @@ Route::fallback(function () {
 });
 
 
-// Route::get('index', function () {
-//     return view('task.index');
-// });
-
-
 
 Route::resource('task', 'taskController');
