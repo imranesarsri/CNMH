@@ -13,16 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'TaskController@index');
 
-// Route::fallback(fn() => ('/'));
+Route::resource('/task', 'TaskController');
 
 Route::fallback(function () {
-    return view('Error404');
+    return view('Layouts.Error404');
 });
-
-
-
-Route::resource('task', 'taskController');

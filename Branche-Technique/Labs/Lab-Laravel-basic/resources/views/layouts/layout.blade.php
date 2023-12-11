@@ -36,14 +36,14 @@
 <body class="sidebar-mini" style="height: auto;">
     <div class="wrapper">
 
-        @include('layouts.navbar')
+        @include('Layouts.Navbar')
 
-        @include('layouts.sidebar')
+        @include('Layouts.Sidebar')
         <div class="content-wrapper" style="min-height: 1302.4px;">
             @yield('content')
         </div>
 
-        @include('layouts.footer')
+        @include('Layouts.Footer')
 
 
     </div>

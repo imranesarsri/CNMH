@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Task;
 use App\Models\Project;
 
-class taskController extends Controller
+class TaskController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +14,7 @@ class taskController extends Controller
     public function index()
     {
         $Tasks = Task::paginate(3);
-        return view('task.index', compact('Tasks'));
+        return view('Tasks.index', compact('Tasks'));
     }
 
     /**
@@ -24,59 +23,38 @@ class taskController extends Controller
     public function create()
     {
         $Projects = Project::all();
-        return view('task.create', compact('Projects'));
+        return view('Tasks.create', compact('Projects'));
+
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    private $columns = ['taskName', 'projectName', 'description'];
     public function store(Request $request)
     {
-
-        // dd($request->taskName, $request->projectName, $request->description);
-        // Task::create([
-        //     'taskName' => $request->taskName,
-        //     'projectName' => $request->projectName,
-        //     'description' => $request->description,
-        // ]);
-        // Task::create($request->only('taskName', 'projectName', 'description'));
-        // $request->validate([
-        // $Task = 'taskName' => 'required|string|max:50',
-        // 'projectName' => 'required',
-        // 'description' => 'required',
-        // ]);
-        // Task::create($Task);
-
-        $data = $request->validate([
-            'taskName' => 'required|string|max:50',
-            'projectName' => 'required',
-            'description' => 'required',
+        $Validation = $request->validate([
+            'name' => 'required|string|max:50',
+            'description' => '',
+            'project_id' => 'required'
         ]);
-        // dd($data);
-        Task::create($data);
-        return redirect('task');
-
+        // dd($Validation);
+        Task::create($Validation);
+        return redirect('/');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    // public function show(string $id)
-    // {
-    //     $Task = Task::find($id);
-    //     return view('task.show', compact('Task'));
-    // }
+    public function show(string $id)
+    {
+        return 'this ' . $id;
 
+    }
     /**
      * Show the form for editing the specified resource.
      */
     public function edit(string $id)
     {
-        // dd(Task::find($id));
         $Task = Task::find($id);
         $Projects = Project::all();
-        return view('task.edit', compact('Task', 'Projects'));
+        return view('Tasks.edit', compact('Task', 'Projects'));
     }
 
     /**
@@ -84,15 +62,15 @@ class taskController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        // dd($request->only($this->columns));
-        $data = $request->validate([
-            'taskName' => 'required|string|max:50',
-            'projectName' => 'required',
-            'description' => 'required',
+        $Validation = $request->validate([
+            'name' => 'required|string|max:50',
+            'description' => '',
+            'project_id' => 'required'
         ]);
-        // dd($data);
-        Task::where('id', $id)->update($data);
-        return redirect('task');
+        // dd($Validation);
+        Task::where('id', $id)->update($Validation);
+        return redirect('/');
+        // dd($request);
     }
 
     /**
@@ -100,10 +78,8 @@ class taskController extends Controller
      */
     public function destroy(string $id)
     {
-        $Task = Task::find($id);
-        $Task->delete();
-        // Task::where('id', $id)->delete();
+        Task::where('id', $id)->delete();
+        return redirect('/');
 
-        return redirect('task');
     }
 }
