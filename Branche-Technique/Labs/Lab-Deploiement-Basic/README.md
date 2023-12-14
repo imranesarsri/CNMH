@@ -7,7 +7,7 @@
 ## Critere de Validation :
 
 - Utiliser le site infinityfree dans une démarche déploiement.
-- 
+
 
 ## Solution
 
