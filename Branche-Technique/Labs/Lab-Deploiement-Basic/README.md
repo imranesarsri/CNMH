@@ -2,9 +2,12 @@
 
 ## Travail à Faire :
 
-- désignation lab crud basic
+- Deploiement lab crud laravel basic
 
 ## Critere de Validation :
+
+- Utiliser le site infinityfree dans une démarche déploiement.
+- 
 
 ## Solution
 
