@@ -11,5 +11,5 @@ utilisation de fonctionnalité Scroll to Text Fragment
 ## Solution
 [Guide de Visite de Tanger](./index.html)
 
-References
+## References
 [W3C](https://wicg.github.io/scroll-to-text-fragment/)
