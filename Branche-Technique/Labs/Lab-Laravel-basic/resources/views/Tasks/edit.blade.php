@@ -11,7 +11,7 @@
                         <div class="card-header">
                             <h3 class="card-title">Edit Tâche </h3>
                         </div>
-                        <form action="{{ route('task.update', ['task' => $Task->id]) }}" method="post">
+                        <form action="{{ route('update', ['task' => $task->id]) }}" method="post">
                             @csrf
                             @method('put')
                             <div class="card-body">
@@ -19,7 +19,7 @@
                                     <label for="Projet">Projet<span class="text-danger">*</span></label>
                                     <select id="Projet" name="project_id" class="custom-select">
                                         @foreach ($Projects as $Project)
-                                            <option @selected($Project->id == $Task->Project->id) value="{{ $Project->id }}"
+                                            <option @selected($Project->id == $task->Project->id) value="{{ $Project->id }}"
                                                 name="{{ $Project->id }}">
                                                 {{ $Project->name }}
                                             </option>
@@ -31,7 +31,7 @@
                                     <label for="Projet">Nom <span class="text-danger">*</span></label>
                                     <input type="text" name="name"
                                         class="form-control @error('name') border-danger @enderror"
-                                        value="{{ $Task->name }}" id="name" placeholder="Enter le name de Tâche">
+                                        value="{{ $task->name }}" id="name" placeholder="Enter le name de Tâche">
                                     @error('name')
                                         <p class="text-danger">{{ $message }}</p>
                                     @enderror
@@ -39,13 +39,13 @@
 
                                 <div class="form-group">
                                     <label for="description">Description</label>
-                                    <textarea id="description" class="form-control" name="description" rows="3" placeholder="Entre un Description ">{{ $Task->description }}</textarea>
+                                    <textarea id="description" class="form-control" name="description" rows="3" placeholder="Entre un Description ">{{ $task->description }}</textarea>
                                 </div>
 
                             </div>
 
                             <div class="card-footer">
-                                <a href="{{ route('task.index') }}" class="btn btn-default">annuler</a>
+                                <a href="{{ route('index') }}" class="btn btn-default">annuler</a>
                                 <button type="submit" class="btn btn-primary">update</button>
                             </div>
                         </form>

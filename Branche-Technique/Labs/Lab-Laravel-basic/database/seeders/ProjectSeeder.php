@@ -2,7 +2,9 @@
 
 namespace Database\Seeders;
 
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 use App\Models\Project;
 
 class ProjectSeeder extends Seeder
@@ -13,8 +15,8 @@ class ProjectSeeder extends Seeder
     public function run(): void
     {
         Project::create([
-            'name' => 'Portfolio',
-            'description' => 'Développement d\'un site web mettant en valeur nos compétences.',
+            'name' => 'CNMH',
+            'description' => 'Création d\'une application web pour la gestion des patients de centre CNMH.',
         ]);
 
         Project::create([
@@ -23,8 +25,9 @@ class ProjectSeeder extends Seeder
         ]);
 
         Project::create([
-            'name' => 'CNMH',
-            'description' => 'Création d\'une application web pour la gestion des patients de centre CNMH.',
+            'name' => 'Portfolio',
+            'description' => 'Développement d\'un site web mettant en valeur nos compétences.',
         ]);
+
     }
 }

@@ -6,12 +6,11 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
-
                     <div class="card card-primary">
                         <div class="card-header">
                             <h3 class="card-title">Ajouter Une Tâche</h3>
                         </div>
-                        <form action="{{ route('task.store') }}" method="post">
+                        <form action="{{ route('store') }}" method="post">
                             @csrf
                             <div class="card-body">
                                 <div class="form-group">
@@ -42,7 +41,7 @@
                             </div>
 
                             <div class="card-footer">
-                                <a href="{{ route('task.index') }}" class="btn btn-default">annuler</a>
+                                <a href="{{ route('index') }}" class="btn btn-default">annuler</a>
                                 <button type="submit" class="btn btn-primary">Ajouter</button>
                             </div>
                         </form>
@@ -51,6 +50,5 @@
                 </div>
             </div>
         </div>
-
     </section>
 @endsection

@@ -22,7 +22,7 @@ class FormTaskRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => 'required|string|max:50',
+            'name' => 'required|string|min:2|max:50',
             'description' => '',
             'project_id' => 'required'
         ];

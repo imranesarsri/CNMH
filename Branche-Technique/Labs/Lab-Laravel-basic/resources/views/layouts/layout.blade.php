@@ -31,14 +31,16 @@
     <!-- summernote -->
     <link rel="stylesheet" href={{ asset('plugins/summernote/summernote-bs4.min.css') }}>
     <link rel="stylesheet" href={{ asset('dist/css/main.css') }}>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
 </head>
 
 <body class="sidebar-mini" style="height: auto;">
     <div class="wrapper">
 
-        @include('Layouts.Navbar')
+        @include('Layouts.NavBar')
 
-        @include('Layouts.Sidebar')
+        @include('Layouts.SideBar')
         <div class="content-wrapper" style="min-height: 1302.4px;">
             @yield('content')
         </div>
@@ -81,7 +83,7 @@
     {{-- <script src={{asset("dist/js/demo.js")}}></script> --}}
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <script src={{ asset('dist/js/pages/dashboard.js') }}></script>
-
+    @yield('scriptSerch')
 </body>
 
 </html>
