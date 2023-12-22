@@ -14,8 +14,8 @@ class TaskController extends Controller
      */
     public function index()
     {
-        $Tasks = Task::paginate(5);
-        return view('Tasks.index', compact('Tasks'));
+        $Tasks = Task::paginate(4);
+        return view('Tasks/index', compact('Tasks'));
     }
 
     /**
@@ -24,8 +24,7 @@ class TaskController extends Controller
     public function create()
     {
         $Projects = Project::all();
-        return view('Tasks.create', compact('Projects'));
-
+        return view('Tasks/create', compact('Projects'));
     }
 
     /**
@@ -33,6 +32,7 @@ class TaskController extends Controller
      */
     public function store(FormTaskRequest $request)
     {
+        // dd($request);
         Task::create($request->validated());
         return redirect('/')->with('success', 'Tâche créée avec succès !');
     }
@@ -40,32 +40,39 @@ class TaskController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(task $id)
+    public function edit(Task $task)
     {
-        dd($id);
-        $Task = Task::find($id);
         $Projects = Project::all();
-        return view('Tasks.edit', compact('Task', 'Projects'));
+        return view('Tasks.edit', compact('task', 'Projects'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(FormTaskRequest $request, string $id)
+    public function update(FormTaskRequest $request, Task $task)
     {
-        // dd($Validation);
-        Task::where('id', $id)->update($request->validated());
-        return redirect('/')->with('success', 'Tâche créée avec succès !');
-        // dd($request);
+        $task->update($request->validated());
+        return redirect('/')->with('success', 'Tâche update avec succès !');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Task $task)
     {
-        Task::where('id', $id)->delete();
-        return redirect('/');
+        $task->delete();
+        return redirect('/')->with('success', 'Tâche delete avec succès !');
+    }
 
+    // search by ajax
+
+    public function ajax_search(Request $request)
+    {
+        dd($request);
+        if ($request->ajax()) {
+            $result = $request->table_search;
+            $data = Task::where('name', 'like', "%{$result}$")->orderby("id", "ASC")->paginate(4);
+            return view('Tasks.search', compact('data'));
+        }
     }
 }

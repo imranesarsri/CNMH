@@ -8,6 +8,7 @@ class CalculeController extends Controller
 {
     public function calculeAddition(Request $request)
     {
+        // dd(phpinfo());
         $numberOne = $request->numberOne;
         $numberTwe = $request->numberTwo;
         $result = $numberOne + $numberTwe;

@@ -19,6 +19,6 @@ Route::get('/', function () {
 });
 
 
-
-
+Route::get('/calc', [CalculeController::class, 'calc'])
+;
 Route::put('calcule', [CalculeController::class, 'calculeAddition']);

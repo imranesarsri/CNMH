@@ -16,6 +16,17 @@
     </div>
     <section class="content">
         <div class="container-fluid">
+            {{-- start alert --}}
+            @if (session('success'))
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <strong>Success </strong> {{ session('success') }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            @endif
+            {{-- end alert --}}
+
             <div class="row">
                 <div class="col-12">
                     <div class="card">
@@ -48,7 +59,7 @@
                                             <td>{{ $Task->name }}</td>
                                             <td>{{ $Task->Project->name }}</td>
                                             <td>{{ $Task->description }}</td>
-                                            <td class="d-flex ">
+                                            <td class="d-flex">
                                                 <a href="{{ route('task.edit', ['task' => $Task->id]) }}"
                                                     class="btn btn-sm btn-default mx-2">
                                                     <i class="fa-solid fa-pen-to-square"></i>
