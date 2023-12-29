@@ -4,7 +4,6 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
 use App\Models\Project;
 
 class ProjectSeeder extends Seeder
@@ -28,6 +27,5 @@ class ProjectSeeder extends Seeder
             'name' => 'Portfolio',
             'description' => 'Développement d\'un site web mettant en valeur nos compétences.',
         ]);
-
     }
 }

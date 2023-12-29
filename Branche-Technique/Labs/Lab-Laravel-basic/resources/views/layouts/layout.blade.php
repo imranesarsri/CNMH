@@ -38,9 +38,9 @@
 <body class="sidebar-mini" style="height: auto;">
     <div class="wrapper">
 
-        @include('Layouts.NavBar')
+        @include('Layouts.Navbar')
 
-        @include('Layouts.SideBar')
+        @include('Layouts.Sidebar')
         <div class="content-wrapper" style="min-height: 1302.4px;">
             @yield('content')
         </div>
@@ -86,30 +86,55 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
+
+
+
+
     <script>
         $(document).ready(function() {
-            $(document).on('keyup', '#table_search', function(e) {
-                e.preventDefault();
-                // let project = document.getElementById('project').value;
-                let search = $(this).val();
-                console.log(search);
-                let page = $('.pagination').find('.active').text(); // Get the current active page
+            function fetchData(page, searchTaskValue, selectProjrctValue) {
                 $.ajax({
-                    url: "{{ route('search') }}",
-                    method: 'GET',
-                    data: {
-                        search: search,
-                        // project: project,
-                    },
+                    url: '/?page=' + page + '&searchTaskValue=' + searchTaskValue + '&selectProjrctValue=' +
+                        selectProjrctValue,
                     success: function(data) {
-                        $('.table-tasks').html(data.table);
-                        $('.pagination').html(data.pagination);
-                    },
-                    error: function(xhr, status, error) {
-                        console.error(xhr.responseText);
+                        $('tbody').html('');
+                        $('tbody').html(data);
+                        // console.log(data);
                     }
                 });
+                console.log(page);
+                console.log(searchTaskValue);
+                console.log(selectProjrctValue);
+            }
+
+            $('body').on('click', '.pagination a', function(e) {
+
+                e.preventDefault();
+
+                let page = $(this).attr('href').split('page=')[1];
+                let searchTaskValue = $('#search-input').val();
+                let selectProjrctValue = $('#filterSelectProjrctValue').val();
+                // console.log($(this).attr('href').split('page=')[1]);
+                // console.log($(this).attr('href'));
+                fetchData(page, searchTaskValue, selectProjrctValue);
+
             });
+
+            $('body').on('keyup', '#search-input', function() {
+                let page = $('#page').val();
+                let searchTaskValue = $('#search-input').val();
+                let selectProjrctValue = $('#filterSelectProjrctValue').val();
+
+                fetchData(page, searchTaskValue, selectProjrctValue);
+            });
+
+            $('#filterSelectProjrctValue').on('change', function() {
+                let page = $('#page').val();
+                let searchTaskValue = $('#search-input').val();
+                let selectProjrctValue = $(this).val();
+                fetchData(page, searchTaskValue, selectProjrctValue);
+            });
+
         });
     </script>
 

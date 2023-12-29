@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Http\Request;
 use App\Models\Task;
 use App\Models\Project;
@@ -12,10 +13,37 @@ class TaskController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $Tasks = Task::paginate(4);
-        return view('Tasks/index', compact('Tasks'));
+
+        $Projects = Project::all();
+
+        $Tasks = Task::with('project')->paginate(4);
+
+        if ($request->ajax()) {
+            $query = Task::query();
+            $Search = $request->get('searchTaskValue');
+            $Filter = $request->get('selectProjrctValue');
+            $Search = str_replace(' ', '%', $Search);
+
+            // pagination
+            if (empty($Search) && $Filter === "Filtrer par projet") {
+                return view('Tasks.Search', compact('Tasks', 'Projects'));
+            }
+            // search
+            if ($Search) {
+                $Tasks = $query->with('project')->where('name', 'like', '%' . $Search . '%')->paginate(4);
+            }
+            // filter
+            if ($Filter !== "Filtrer par projet") {
+                $Tasks = $query->where('project_id', $Filter)->paginate(3);
+            }
+            return view('Tasks.Search', compact('Tasks', 'Projects'))->render();
+        }
+
+        return view('Tasks.index', compact('Tasks', 'Projects'));
+
+
     }
 
     /**
@@ -24,7 +52,7 @@ class TaskController extends Controller
     public function create()
     {
         $Projects = Project::all();
-        return view('Tasks/create', compact('Projects'));
+        return view('Tasks.create', compact('Projects'));
     }
 
     /**
@@ -32,9 +60,10 @@ class TaskController extends Controller
      */
     public function store(FormTaskRequest $request)
     {
-        // dd($request);
+        // dd($request->validated());
         Task::create($request->validated());
         return redirect('/')->with('success', 'Tâche créée avec succès !');
+
     }
 
     /**
@@ -43,14 +72,24 @@ class TaskController extends Controller
     public function edit(Task $task)
     {
         $Projects = Project::all();
+
         return view('Tasks.edit', compact('task', 'Projects'));
     }
+
+
+    public function show(Task $task)
+    {
+        $Projects = Project::all();
+        return view('Tasks.show', compact('task', 'Projects'));
+    }
+
 
     /**
      * Update the specified resource in storage.
      */
     public function update(FormTaskRequest $request, Task $task)
     {
+        // dd($task);
         $task->update($request->validated());
         return redirect('/')->with('success', 'Tâche update avec succès !');
     }
@@ -62,38 +101,5 @@ class TaskController extends Controller
     {
         $task->delete();
         return redirect('/')->with('success', 'Tâche delete avec succès !');
-    }
-
-    // search by ajax
-
-    // public function ajax_search(Request $request)
-    // {
-    //     dd($request);
-    //     if ($request->ajax()) {
-    //         $result = $request->table_search;
-    //         $data = Task::where('name', 'like', "%{$result}$")->orderby("id", "ASC")->paginate(4);
-    //         return view('Tasks.search', compact('data'));
-    //     }
-    // }
-
-    public function searchTask(Request $request)
-    {
-        $Search = $request->input('search');
-
-        // Check if the search value is empty
-        if (empty($Search)) {
-            $Tasks = Task::paginate(4);
-        } else {
-            $Tasks = Task::where('name', 'like', '%' . $Search . '%')->paginate(4);
-        }
-
-        // Controller code
-        if ($request->ajax()) {
-            return response()->json([
-                'table' => view('Tasks.table', compact('Tasks'))->render(),
-                'pagination' => $Tasks->links()->toHtml(),
-            ]);
-        }
-
     }
 }
