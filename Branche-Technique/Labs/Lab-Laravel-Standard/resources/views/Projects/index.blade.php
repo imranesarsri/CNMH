@@ -4,29 +4,13 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Liste des tâche</h1>
-                </div>
-                <div class="col-sm-6">
-                    <div class="float-sm-right">
-                        <a href="{{ route('task.create') }}" class="btn btn-sm btn-primary">Ajouter tâche</a>
-                    </div>
+                    <h1>Liste des Projets</h1>
                 </div>
             </div>
         </div>
     </div>
     <section class="content">
         <div class="container-fluid">
-            {{-- start alert --}}
-            @if (session('success'))
-                <div class="alert alert-success alert-dismissible fade show" role="alert">
-                    <strong>Success </strong> {{ session('success') }}
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-            @endif
-            {{-- end alert --}}
-
             <div class="row">
                 <div class="col-12">
                     <div class="card">
@@ -39,12 +23,9 @@
                                                 class="fas fa-filter"></i></label>
                                         <select name="project_id" class="form-select form-control"
                                             id="filterSelectProjrctValue" aria-label="Filter Select">
-                                            {{-- @isset($task)
-
-                                            @endisset --}}
                                             <option value="Tout le projet">Tout le projet</option>
                                             @foreach ($projectsFilter as $projectFilter)
-                                                <option @selected($projectFilter->id == $task) value="{{ $projectFilter->id }}">
+                                                <option value="{{ $projectFilter->name }}">
                                                     {{ $projectFilter->name }}
                                                 </option>
                                             @endforeach
@@ -60,7 +41,7 @@
                             </div>
                         </div>
                         <div id="search_ajax">
-                            @include('Tasks.table')
+                            @include('Projects.table')
                         </div>
                     </div>
                 </div>
@@ -74,7 +55,7 @@
         $(document).ready(function() {
             function fetchData(page, searchTaskValue, selectProjrctValue) {
                 $.ajax({
-                    url: 'task/?page=' + page + '&searchTaskValue=' + searchTaskValue +
+                    url: '?page=' + page + '&searchTaskValue=' + searchTaskValue +
                         '&selectProjrctValue=' +
                         selectProjrctValue,
                     success: function(data) {

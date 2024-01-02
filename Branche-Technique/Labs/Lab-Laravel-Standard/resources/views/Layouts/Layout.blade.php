@@ -18,6 +18,9 @@
     <link rel="stylesheet" href={{ asset('https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css') }}>
     <!-- Tempusdominus Bootstrap 4 -->
     <link rel="stylesheet" href={{ asset('plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css') }}>
+    <!-- Tempusdominus Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!-- iCheck -->
     <link rel="stylesheet" href={{ asset('plugins/icheck-bootstrap/icheck-bootstrap.min.css') }}>
     <!-- JQVMap -->
@@ -85,33 +88,9 @@
     <script src={{ asset('dist/js/pages/dashboard.js') }}></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    {{--
-    <script>
-        $(document).ready(function() {
-            $(document).on('keyup', '#table_search', function(e) {
-                e.preventDefault();
-                // let project = document.getElementById('project').value;
-                let search = $(this).val();
-                console.log(search);
-                let page = $('.pagination').find('.active').text(); // Get the current active page
-                $.ajax({
-                    url: "{{ route('search') }}",
-                    method: 'GET',
-                    data: {
-                        search: search,
-                        // project: project,
-                    },
-                    success: function(data) {
-                        $('.table-tasks').html(data.table);
-                        $('.pagination').html(data.pagination);
-                    },
-                    error: function(xhr, status, error) {
-                        console.error(xhr.responseText);
-                    }
-                });
-            });
-        });
-    </script> --}}
+
+
+    @yield('script_ajax')
 
 </body>
 
