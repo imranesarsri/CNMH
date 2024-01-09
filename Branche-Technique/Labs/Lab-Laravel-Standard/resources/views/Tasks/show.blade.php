@@ -1,31 +1,37 @@
 @extends('Layouts.Layout')
 @section('content')
     <div class="content-header">
+    </div>
+    <section class="content-header">
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Details de la tâche :</h1>
+                    <h1 class="card-title">Détail s de {{ $task->name }}</h1>
                 </div>
-
+                <div class="col-sm-6">
+                    <a class="btn btn-default float-right" href="{{ route('task.index') }}">Retour</a>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-md-6 offset-md-3">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ $task->name }}</h5>
-                        <p class="card-text">{{ $task->description }}</p>
-                        <div class="tags mt-3">
-                            <span class="badge badge-primary">{{ $task->project->name }}</span>
-                        </div>
+    <div class="content px-3">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <label for="nom">Nom: </label>
+                        <p>{{ $task->name }}</p>
                     </div>
-                </div>
-                <div class="">
-                    <div class="d-flex justify-content-end ">
-                        <a href="{{ route('task.index') }}" class="btn btn-md btn-secondary">Retour</a>
+                    <div class="col-sm-12">
+                        <label for="nom">Nom du projet: </label>
+                        <p>{{ $task->project->name }}</p>
+                    </div>
+
+
+                    <div class="col-sm-12">
+                        <label for="description">Description: </label>
+                        <p>{{ $task->description }}</p>
                     </div>
                 </div>
             </div>

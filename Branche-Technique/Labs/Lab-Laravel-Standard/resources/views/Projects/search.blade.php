@@ -1,8 +1,7 @@
 @foreach ($projects as $project)
     <tr>
         <td>{{ $project->name }}</td>
-        <td>{{ Str::limit($project->description, 50) }} <a href="{{ route('project.show', $project->id) }}">read
-                more...</a></td>
+        <td>{{ $project->description }}</td>
 
         {{-- <td>{{ $Project->project->name }}</td> --}}
 

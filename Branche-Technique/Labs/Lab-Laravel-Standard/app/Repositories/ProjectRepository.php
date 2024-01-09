@@ -12,7 +12,7 @@ class ProjectRepository extends BaseRepository
         $this->model = $Project;
     }
     protected $fieldProject = [
-        'nom',
+        'name',
         'description',
     ];
 
@@ -25,4 +25,5 @@ class ProjectRepository extends BaseRepository
     {
         return Project::class;
     }
+
 }
